@@ -20,7 +20,7 @@ public class home extends AppCompatActivity {
 
         createalert1=(Button)findViewById(R.id.createalert);
         myalert=(Button)findViewById(R.id.myalert);
-        allalerts=(Button)findViewById(R.id.allalerts);
+        allalerts=(Button)findViewById(R.id.allalert1);
 
         logout=(TextView)findViewById(R.id.logout);
 
@@ -36,9 +36,17 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent=new Intent(home.this,myalerts.class);
+                Intent intent=new Intent(home.this,Myalerts.class);
                 startActivity(intent);
 
+            }
+        });
+
+        allalerts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ii=new Intent(home.this,Allalertss.class);
+                startActivity(ii);
             }
         });
 

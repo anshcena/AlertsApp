@@ -31,8 +31,11 @@ public class Allalertss extends AppCompatActivity {
 
         report.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent ii=new Intent(Allalertss.this,)
+            public void onClick(View v)
+            {
+
+                //Intent ii=new Intent(Allalertss.this,)
+
             }
         });
 

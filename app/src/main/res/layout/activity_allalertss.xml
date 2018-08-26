@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.root.alertsapp.Allalertss">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:text=" ALL ALERTS "
+        android:textSize="25sp"
+        android:id="@+id/textView23" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView23"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="32dp"
+        android:text="TASK"
+        android:id="@+id/textView24" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView24"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_marginStart="47dp"
+        android:layout_toEndOf="@+id/textView24"
+        android:text="STATUS"
+        android:id="@+id/textView25" />
+
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView25"
+        android:layout_alignBottom="@+id/textView25"
+        android:layout_marginStart="22dp"
+        android:layout_toEndOf="@+id/textView25"
+        android:text="DELAY IN
+ACCEPTING"
+        android:textAlignment="textStart"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView26"
+        android:layout_alignBottom="@+id/textView26"
+        android:layout_toEndOf="@+id/textView23"
+        android:text="TIME TAKEN TO COMPLETE"
+        android:textAlignment="textEnd"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="62dp"
+        android:layout_marginEnd="13dp"
+        android:background="#FF3F51B4"
+        android:text="REPORTS"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:id="@+id/reports"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView24"
+        android:layout_marginBottom="15dp"
+        android:text="BACK"
+        android:id="@+id/backtomyalerts2"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".home" />
+        <activity android:name=".createalert" />
+        <activity android:name=".Myalerts" />
+        <activity android:name=".Createdbme" />
+        <activity android:name=".Acceptedbme" />
+        <activity android:name=".Allalertss" />
+        <activity android:name=".Task_details"></activity>
     </application>
 
 </manifest>

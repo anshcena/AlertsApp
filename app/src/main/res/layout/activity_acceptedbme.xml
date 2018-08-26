@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.root.alertsapp.Acceptedbme">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text="ACCEPTED BY ME"
+        android:textSize="25sp"
+        android:id="@+id/textView19" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView19"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="61dp"
+        android:layout_toEndOf="@+id/textView20"
+        android:text="TASK NO."
+        android:id="@+id/textView21" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView21"
+        android:layout_alignBottom="@+id/textView21"
+        android:layout_alignStart="@+id/textView19"
+        android:layout_marginStart="72dp"
+        android:text="TASK"
+        android:id="@+id/textView22" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView22"
+        android:layout_alignBottom="@+id/textView22"
+        android:layout_toEndOf="@+id/textView19"
+        android:text="STATUS" />
+
+    <TextView
+        android:id="@+id/backtomyalerts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView21"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/textView21"
+        android:layout_marginBottom="12dp"
+        android:clickable="true"
+        android:text="BACK"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>
