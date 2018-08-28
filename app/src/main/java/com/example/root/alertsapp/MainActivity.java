@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     for(int i=0;i<50;i++)
                     {
 
-                        if(((empid.getText().toString().equals(idpass[i][0]))) && (pswd.getText().toString().equals(idpass[0][1])))
+                    if(((empid.getText().toString().equals(idpass[i][0]))) && (pswd.getText().toString().equals(idpass[0][1])))
                         {
                             Toast.makeText(MainActivity.this, "Welcome...", Toast.LENGTH_SHORT).show();
                             Intent iii=new Intent(MainActivity.this,home.class);
