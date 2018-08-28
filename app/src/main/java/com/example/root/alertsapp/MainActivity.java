@@ -13,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     EditText empid,pswd;
     Button login;
-    
+    DatabaseHelper db;
+    String email,password;
 
 
     String idpass[][]={{"GIEHEAD","Aquarelle1"},{"FMANAGER","Aquarelle2"},{"PMANAGER","Aquarelle3"},{"IEE","Aquarelle4"},{"IELE","Aquarelle5"},{"HRMANAGER","Aquarelle6"},{"WEOF","Aquarelle7"},{"RQH","Aquarelle8"},{"QAM","Aquarelle9"},{"RMH","Aquarelle10"},{"MI","Aquarelle11"},{"S","tAquarelle12"},
@@ -30,51 +31,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        db=new DatabaseHelper(this);
 
         empid=(EditText)findViewById(R.id.empid);
 
         pswd=(EditText)findViewById(R.id.pswd);
         login=(Button)findViewById(R.id.login);
 
-
-
-
         login.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-
-
-
-
-                if(empid.getText().toString().equals("                                        ")==true)
-                {
-                    Toast.makeText(MainActivity.this, "Enter EMP ID & Password", Toast.LENGTH_SHORT).show();
-                    empid.setText("");
-                }
-                else
-                {
-                    for(int i=0;i<50;i++)
-                    {
-
-                        if(((empid.getText().toString().equals(idpass[i][0]))) && (pswd.getText().toString().equals(idpass[0][1])))
-                        {
-                            Toast.makeText(MainActivity.this, "Welcome...", Toast.LENGTH_SHORT).show();
-                            Intent iii=new Intent(MainActivity.this,home.class);
-                            startActivity(iii);
-                        }
-                        else
-                        {
-                            Toast.makeText(MainActivity.this, "Check id & Password !", Toast.LENGTH_SHORT).show();
-                            empid.setText("");
-                        }
-                    }
-                }
-
-
+            public void onClick(View view) {
+                email=empid.getText().toString();
+                password=pswd.getText().toString();
+              Boolean chkemailpass=db.emailpassword(email,password);
+            //    if (chkemailpass==true)
+              //      Toast.makeText(getApplicationContext(),"Login Sucessfully",Toast.LENGTH_SHORT).show();
+               // else
+                 //   Toast.makeText(getApplicationContext(),"Worng Email and Password",Toast.LENGTH_SHORT).show();
 
             }
         });
+
+
 
 
 
