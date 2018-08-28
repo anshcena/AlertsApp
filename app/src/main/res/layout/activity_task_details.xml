@@ -50,4 +50,228 @@
         android:layout_alignStart="@+id/tasknum" />
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView29"
+        android:layout_below="@+id/textView29"
+        android:layout_marginTop="11dp"
+        android:text="Section"
+        android:id="@+id/textView30" />
+
+    <EditText
+        android:id="@+id/section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView30"
+        android:layout_alignStart="@+id/task" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView30"
+        android:layout_below="@+id/textView30"
+        android:layout_marginTop="12dp"
+        android:text="Line"
+        android:id="@+id/textView31" />
+
+    <EditText
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView31"
+        android:layout_alignBottom="@+id/textView31"
+        android:layout_alignStart="@+id/section"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_toStartOf="@+id/textView27"
+        android:text="Attendee Profile"
+        android:id="@+id/textView32" />
+
+    <EditText
+        android:id="@+id/attendee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView32"
+        android:layout_alignBottom="@+id/textView32"
+        android:layout_alignStart="@+id/line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView31"
+        android:layout_below="@+id/attendee"
+        android:text=" Status Time"
+        android:id="@+id/textView33" />
+
+    <EditText
+        android:id="@+id/statustime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView33"
+        android:layout_alignBottom="@+id/textView33"
+        android:layout_alignStart="@+id/attendee" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView32"
+        android:layout_below="@+id/statustime"
+        android:layout_marginTop="18dp"
+        android:text="Created at"
+        android:id="@+id/textView34" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView34"
+        android:layout_alignBottom="@+id/textView34"
+        android:layout_marginEnd="14dp"
+        android:layout_toStartOf="@+id/statustime"
+        android:text="Accepted at"
+        android:id="@+id/textView35" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView35"
+        android:layout_alignBottom="@+id/textView35"
+        android:layout_toEndOf="@+id/tasknum"
+        android:text="Resolved"
+        android:textStyle="italic"
+        android:id="@+id/textView36" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView29"
+        android:layout_below="@+id/textView34"
+        android:id="@+id/createdat"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/textView35"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/textView32" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView36"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/statustime"
+        android:text="Creator"
+        android:id="@+id/textView37" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView36"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/textView37"
+        android:text="Attendee"
+        android:id="@+id/textView40" />
+
+    <EditText
+        android:id="@+id/creator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/attendeee"
+        android:layout_alignBottom="@+id/attendeee"
+        android:layout_alignEnd="@+id/textView27" />
+
+    <EditText
+        android:id="@+id/attendeee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/attendee"
+        android:layout_marginTop="75dp"
+        android:layout_toEndOf="@+id/textView36" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/textView32"
+        android:src="@drawable/line" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/creator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="FORWARD ALERT"
+        android:textStyle="bold"
+        android:id="@+id/textView38" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView28"
+        android:layout_below="@+id/textView38"
+        android:layout_marginTop="12dp"
+        android:text="To"
+        android:id="@+id/textView39" />
+
+    <Spinner
+        android:id="@+id/tofromprofile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView40"
+        android:layout_alignTop="@+id/textView39"></Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView39"
+        android:layout_below="@+id/tofromprofile"
+        android:text="Issue"
+        android:id="@+id/textView41" />
+
+    <EditText
+        android:id="@+id/issuetoauthority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView41"
+        android:layout_alignBottom="@+id/textView41"
+        android:layout_alignStart="@+id/textView37" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView39"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="11dp"
+        android:background="#FF3F51B4"
+        android:text="BACK"
+        android:textSize="20sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:id="@+id/bcktohome"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/backtohome"
+        android:layout_alignBottom="@+id/bcktohome"
+        android:layout_alignStart="@+id/tofromprofile"
+        android:background="#FF3F51B4"
+        android:text="SEND"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/sendtoauth"/>
+
+
+
+
 </RelativeLayout>

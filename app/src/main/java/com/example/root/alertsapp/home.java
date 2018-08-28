@@ -24,6 +24,14 @@ public class home extends AppCompatActivity {
 
         logout=(TextView)findViewById(R.id.logout);
 
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(home.this,MainActivity.class);
+                startActivity(i);
+            }
+        });
+
         createalert1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
