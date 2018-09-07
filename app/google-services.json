@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1076860033407",
+    "firebase_url": "https://alertsapp-990a6.firebaseio.com",
+    "project_id": "alertsapp-990a6",
+    "storage_bucket": "alertsapp-990a6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076860033407:android:1ef381c9def0e068",
+        "android_client_info": {
+          "package_name": "com.example.root.alertsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1076860033407-gpu8fchh3uu74tl6vlnptp28l8ohf9et.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.root.alertsapp",
+            "certificate_hash": "08e1fd953d637b6fd1906ef4b61b8b11727c9ec4"
+          }
+        },
+        {
+          "client_id": "1076860033407-2f44konntj8f6ouie3n5jip5mauu8pu7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJTr4WQpkWX2Lz3pFs26_S6owQlcAwzoM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1076860033407-2f44konntj8f6ouie3n5jip5mauu8pu7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
