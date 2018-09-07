@@ -15,15 +15,27 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+
 public class createalert extends AppCompatActivity {
 
+    private static final String TAG ="";
     Spinner section,line,profile,depart,machine,task,prof;
     Button back,createalertbutton,gobaacktohomefordailog;
+
+
+
+
+
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_createalert);
+
 
 
 
@@ -176,13 +188,7 @@ public class createalert extends AppCompatActivity {
 
 
 
-                gobaacktohomefordailog.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent i=new Intent(createalert.this,home.class);
-                        startActivity(i);
-                    }
-                });
+
 
 
 
@@ -190,6 +196,13 @@ public class createalert extends AppCompatActivity {
         });
 
 
+        gobaacktohomefordailog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(createalert.this,home.class);
+                startActivity(i);
+            }
+        });
 
 
 
@@ -209,14 +222,58 @@ public class createalert extends AppCompatActivity {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
+
+
+
+
 
     private void addNotification()
     {
         NotificationCompat.Builder builder=new NotificationCompat.Builder(this);
         builder.setSmallIcon(R.drawable.ic_launcher_background);
         builder.setContentTitle("Notification Example");
-        builder.setContentText("ALERET");
+        builder.setContentText("ALERT");
+
+     /*   Uri uri= RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        builder.setSound()
+
+        */
+
+
+
 
         Intent noti=new Intent(this, Alert.class);
         PendingIntent contentIntent=PendingIntent.getActivity(this, 0,noti,PendingIntent.FLAG_UPDATE_CURRENT);
@@ -226,8 +283,13 @@ public class createalert extends AppCompatActivity {
         manager.notify(0, builder.build());
 
 
-
     }
 
 
+
+
+
+
+
 }
+

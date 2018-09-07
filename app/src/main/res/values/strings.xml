@@ -1,3 +1,100 @@
 <resources>
     <string name="app_name">AlertsApp</string>
+    <string-array name="sectionlist">
+        <item>--blank--</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+    <string-array name="lineA">
+        <item>--blank--</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+    <string-array name="lineB">
+        <item>--blank--</item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+    </string-array>
+    <string-array name="lineC">
+        <item>--blank--</item>
+        <item>A1</item>
+        <item>A2</item>
+        <item>A3</item>
+        <item>B1</item>
+        <item>B2</item>
+        <item>B3</item>
+        <item>B4</item>
+        <item>C1</item>
+        <item>C2</item>
+        <item>C3</item>
+    </string-array>
+
+    <string-array name="profilelist">
+        <item>--blank--</item>
+        <item>Global IE Head</item>
+        <item>Factory Mananger</item>
+        <item>Production Manager</item>
+        <item>IE Excutive</item>
+        <item>IE Lean Executive</item>
+        <item>HR Manger</item>
+        <item>Welfare Officers</item>
+        <item>Regional Quality Head</item>
+        <item>Quality Assurance Manager</item>
+        <item>Regional Maintenance Head</item>
+        <item>Mantainance Incharge</item>
+        <item>Quality Checker 4</item>
+        <item>Quality Checker 5</item>
+    </string-array>
+
+    <string-array name="departmentlist">
+        <item>--blank--</item>
+        <item>Maintance</item>
+        <item> Feeding Helpers</item>
+        <item>  HR</item>
+        <item> Quality</item>
+        <item> IE</item>
+    </string-array>
+
+    <string-array name="Maintance">
+        <item>--blank--</item>
+        <item>Changeover </item>
+        <item>Machine Breakdown</item>
+        <item>Quality Issues</item>
+        <item>Per-run follow up</item>
+    </string-array>
+
+    <string-array name="FeedingHelpers">
+        <item>--blank--</item>
+        <item>Alteration Follow up</item>
+        <item>Thread and label</item>
+        <item>Recutting</item>
+    </string-array>
+
+    <string-array name="HR">
+        <item>--blank--</item>
+        <item>  Operation Unavaliblity</item>
+        <item>  Disciplinary Issues</item>
+    </string-array>
+
+    <string-array name="Quality">
+        <item>--blank--</item>
+        <item> Perssitent Poor Quality</item>
+        <item> Training</item>
+        <item>Critical operation follow up</item>
+        <item> Monitoring</item>
+    </string-array>
+
+    <string-array name="IE">
+        <item>--blank--</item>
+        <item> Line Balancing Issues</item>
+        <item>Pre run follow up</item>
+        <item> 5s/Kanban follow</item>
+        <item>Training  on the floor</item>
+        <item>Operator Unavaliblity</item>
+    </string-array>
 </resources>

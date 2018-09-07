@@ -9,7 +9,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import com.pusher.client.Pusher;
+import com.pusher.client.PusherOptions;
+import com.pusher.client.channel.Channel;
+import com.pusher.client.channel.SubscriptionEventListener;
+import com.pusher.pushnotifications.PushNotifications;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -52,6 +57,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
+        PushNotifications.start(getApplicationContext(),"502a2eb7-7efe-4d30-a15a-a645f3ff15db");
+        PushNotifications.subscribe("hello");
+
+
+
+
+
+
+
+
+
         empid = (EditText) findViewById(R.id.empid);
 
         pswd = (EditText) findViewById(R.id.pswd);
@@ -61,7 +80,8 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                email=empid.getText().toString();
+                password=pswd.getText().toString();
             new Mydownloader().execute();
 
                             }
@@ -70,9 +90,52 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
+
+
+
+        PusherOptions options = new PusherOptions();
+        options.setCluster("ap2");
+        Pusher pusher = new Pusher("0a562ccafe38b9975498", options);
+
+        Channel channel = pusher.subscribe("my-channel");
+
+        channel.bind("my-event", new SubscriptionEventListener() {
+            @Override
+            public void onEvent(String channelName, String eventName, final String data) {
+                System.out.println(data);
+            }
+        });
+
+        pusher.connect();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
-    public class Mydownloader extends AsyncTask<String, Void, Bitmap> {
+    private class Mydownloader extends AsyncTask<String, Void, Bitmap> {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -88,10 +151,9 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 // url where the data will be posted
-                String postReceiverUrl = "http://192.168.43.215:8080/api/login/";
+                String postReceiverUrl = "http://192.168.1.218:8000/api/login/";
                 Log.v(TAG, "postURL: " + postReceiverUrl);
-                email=empid.getText().toString();
-                password=pswd.getText().toString();
+
 
                 HttpClient c = new DefaultHttpClient();
 
@@ -101,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
 // add your data
                 List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>(3);
 
-                nameValuePairs.add(new BasicNameValuePair("email", ""+email));
+                nameValuePairs.add(new BasicNameValuePair("username", ""+email));
                 nameValuePairs.add(new BasicNameValuePair("password", ""+password));
                 nameValuePairs.add(new BasicNameValuePair("state","1"));
 
@@ -111,25 +173,34 @@ public class MainActivity extends AppCompatActivity {
                 HttpResponse response = c.execute(h);
                 HttpEntity resEntity = response.getEntity();
 
-                if(response.toString().equals("1"))
-                {
-                    Toast.makeText(MainActivity.this, "WELCOME", Toast.LENGTH_SHORT).show();
-
-                    Intent iii = new Intent(MainActivity.this, home.class);
-                    startActivity(iii);
-                }
-
-                else {
-                    Toast.makeText(MainActivity.this, "Enter correct EMPid and Password !", Toast.LENGTH_SHORT).show();
-                }
-
                 if (resEntity != null) {
 
                     String responseStr = EntityUtils.toString(resEntity).trim();
                     Log.v(TAG, "Response: " + responseStr);
 
+                    if(responseStr.equals("1"))
+                    {
+                   //     Toast.makeText(MainActivity.this, "WELCOME", Toast.LENGTH_SHORT).show();
+
+                        Intent iii = new Intent(MainActivity.this, home.class);
+                        iii.putExtra("username",email);
+                        startActivity(iii);
+                    }
+
+
+
+
                     // you can add an if statement here and do other actions based on the response
                 }
+
+
+
+              /*  else {
+
+                    Toast.makeText(MainActivity.this, "AGAIN", Toast.LENGTH_SHORT).show();
+                }*/
+
+
             }
             catch (ClientProtocolException e) {
                 e.printStackTrace();
@@ -137,8 +208,6 @@ public class MainActivity extends AppCompatActivity {
             catch (IOException e) {
                 e.printStackTrace();
             }
-
-
 
 
 

@@ -2,6 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.root.alertsapp">
 
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+
+
+
+
+
+
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,7 +34,10 @@
         <activity android:name=".Createdbme" />
         <activity android:name=".Acceptedbme" />
         <activity android:name=".Allalertss" />
-        <activity android:name=".Task_details"></activity>
+        <activity android:name=".Task_details" />
+        <activity android:name=".Alert"></activity>
     </application>
+
+
 
 </manifest>

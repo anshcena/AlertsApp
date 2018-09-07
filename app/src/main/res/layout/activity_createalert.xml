@@ -4,152 +4,146 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.root.alertsapp.createalert">
-
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="33dp"
-        android:layout_toEndOf="@+id/textView7"
-        android:text="CREATE ALERT"
-        android:textSize="25dp"
-        android:textStyle="bold" />
+    tools:context="com.example.root.alertsapp.createalert"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:text="MY DETAILS"
-        android:textSize="18dp" />
-
-    <TextView
-        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView5"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="11dp"
-        android:text="Section"
-        android:textSize="15dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="17dp"
+        android:text="CREATE ALERT"
+        android:textSize="20sp"
+        android:id="@+id/textView4" />
 
-
-    <Spinner
-        android:id="@+id/section"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView6"
-        android:layout_toEndOf="@+id/textView4">
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="17dp"
+        android:text="MY DETAILS"
+        android:textSize="17sp"
+        android:id="@+id/textView5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:layout_marginEnd="28dp"
+        android:layout_marginTop="11dp"
+        android:layout_toStartOf="@+id/textView5"
+        android:text="Section"
+        android:id="@+id/sec"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/sec"
+        android:layout_toEndOf="@+id/textView5">
 
     </Spinner>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/sec"
+        android:layout_below="@+id/spinner"
+        android:layout_marginTop="12dp"
+        android:text="Line"
+        android:id="@+id/textView6" />
+
+    <Spinner
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/spinner"
+        android:layout_alignTop="@+id/textView6"></Spinner>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView6"
         android:layout_below="@+id/textView6"
-        android:layout_marginTop="22dp"
-        android:text="Line"
-        android:textSize="15dp"
-        android:id="@+id/textView7" />
-
-    <Spinner
-        android:id="@+id/line"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView7"
-        android:layout_alignStart="@+id/section">
-
-    </Spinner>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView7"
-        android:layout_below="@+id/textView7"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="13dp"
         android:text="Profile"
-        android:id="@+id/textView8" />
+        android:id="@+id/textView7" />
 
     <Spinner
         android:id="@+id/profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView8"
-        android:layout_alignStart="@+id/line">
-
-    </Spinner>
+        android:layout_alignStart="@+id/line"
+        android:layout_alignTop="@+id/textView7"></Spinner>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView5"
-        android:layout_below="@+id/textView8"
-        android:layout_marginTop="21dp"
+        android:layout_below="@+id/textView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
         android:text="REQUIREMENT"
-        android:textSize="18dp"
-        android:id="@+id/textView9" />
+        android:textSize="18sp"
+        android:id="@+id/textView8" />
 
     <TextView
+        android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView8"
-        android:layout_below="@+id/textView9"
-        android:layout_marginTop="14dp"
-        android:text="Department"
-        android:textSize="15dp"
-        android:id="@+id/textView10" />
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/textView5"
+        android:text="Department" />
 
     <Spinner
         android:id="@+id/department"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/profile"
-        android:layout_alignTop="@+id/textView10"></Spinner>
+        android:layout_alignTop="@+id/textView9"></Spinner>
 
     <TextView
+        android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView10"
+        android:layout_alignStart="@+id/textView9"
         android:layout_below="@+id/department"
-        android:text="Machine"
-        android:textSize="15dp"
-        android:id="@+id/textView13" />
+        android:layout_marginTop="21dp"
+        android:text="Machine" />
 
     <Spinner
         android:id="@+id/machine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/department"
-        android:layout_below="@+id/department"></Spinner>
+        android:layout_alignTop="@+id/textView10"></Spinner>
 
     <TextView
+        android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView13"
+        android:layout_alignStart="@+id/textView10"
         android:layout_below="@+id/machine"
-        android:text="Task"
-        android:textSize="15dp"
-        android:id="@+id/textView14" />
+        android:layout_marginTop="23dp"
+        android:text="Task" />
 
     <Spinner
         android:id="@+id/task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/machine"
-        android:layout_below="@+id/machine"></Spinner>
+        android:layout_alignTop="@+id/textView13"></Spinner>
 
     <TextView
+        android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView14"
+        android:layout_alignStart="@+id/textView13"
         android:layout_below="@+id/task"
+        android:layout_marginTop="19dp"
         android:text="Profile" />
 
     <Spinner
@@ -157,34 +151,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/task"
-        android:layout_below="@+id/task"></Spinner>
-
+        android:layout_alignTop="@+id/textView14"></Spinner>
 
     <Button
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView7"
         android:layout_below="@+id/prof"
         android:layout_marginTop="23dp"
-        android:layout_toStartOf="@+id/textView9"
-        android:background="#3f51b4"
-        android:text="BACK"
-        android:textStyle="bold"
-        android:textColor="#fff"
-        android:textSize="20sp"/>
+        android:text="BACK" />
 
     <Button
-        android:id="@+id/createalertbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/back"
         android:layout_alignBottom="@+id/back"
         android:layout_alignEnd="@+id/prof"
-        android:background="#3f51b4"
-        android:text=" CREATE ALERT "
-        android:textColor="#fff"
-        android:textSize="20sp" />
-
-
+        android:text="CREATE ALERT"
+        android:id="@+id/createalertbutton"/>
 
 </RelativeLayout>
