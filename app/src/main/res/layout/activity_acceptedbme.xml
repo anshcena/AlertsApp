@@ -43,7 +43,8 @@
         android:layout_alignBaseline="@+id/textView22"
         android:layout_alignBottom="@+id/textView22"
         android:layout_toEndOf="@+id/textView19"
-        android:text="STATUS" />
+        android:text="STATUS"
+        android:id="@+id/textView68" />
 
     <TextView
         android:id="@+id/backtomyalerts"
@@ -56,6 +57,102 @@
         android:clickable="true"
         android:text="BACK"
         android:textSize="18sp" />
+
+    <TextView
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView21"
+        android:layout_below="@+id/textView21"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="18dp"
+        android:text="---"
+        android:id="@+id/textView66" />
+
+    <TextView
+        android:clickable="true"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView66"
+        android:layout_alignBottom="@+id/textView66"
+        android:layout_alignEnd="@+id/textView22"
+        android:layout_marginEnd="11dp"
+        android:text="---"
+        android:id="@+id/textView67" />
+
+    <TextView
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView67"
+        android:layout_alignBottom="@+id/textView67"
+        android:layout_alignStart="@+id/textView68"
+        android:layout_marginStart="19dp"
+        android:text="---"
+        android:id="@+id/textView71" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView66"
+        android:layout_below="@+id/textView66"
+        android:layout_marginTop="33dp"
+        android:clickable="true"
+        android:text="---"
+        android:id="@+id/textView69" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_alignBaseline="@+id/textView69"
+        android:layout_alignBottom="@+id/textView69"
+        android:layout_alignStart="@+id/textView67"
+        android:text="---"
+        android:id="@+id/textView70" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView70"
+        android:clickable="true"
+        android:layout_alignBottom="@+id/textView70"
+        android:layout_alignStart="@+id/textView71"
+        android:text="---"
+        android:id="@+id/textView74" />
+
+    <TextView
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView69"
+        android:layout_below="@+id/textView69"
+        android:layout_marginTop="25dp"
+        android:text="---"
+        android:id="@+id/textView72" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:clickable="true"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView72"
+        android:layout_alignBottom="@+id/textView72"
+        android:layout_alignStart="@+id/textView70"
+        android:text="---"
+        android:id="@+id/textView73" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_alignBaseline="@+id/textView73"
+        android:layout_alignBottom="@+id/textView73"
+        android:layout_alignStart="@+id/textView74"
+        android:text="---"
+        android:id="@+id/textView77"/>
+
 
 
 </RelativeLayout>

@@ -25,6 +25,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import static com.example.root.alertsapp.MainActivity.url;
+
 public class home extends AppCompatActivity {
 
 
@@ -104,7 +106,7 @@ public class home extends AppCompatActivity {
 
             try {
                 // url where the data will be posted
-                String postReceiverUrl = "http://192.168.1.218:8000/api/logout/";
+                String postReceiverUrl = url + "logout/";
                 Log.v(TAG, "postURL: " + postReceiverUrl);
 
                 Bundle bundle=getIntent().getExtras();

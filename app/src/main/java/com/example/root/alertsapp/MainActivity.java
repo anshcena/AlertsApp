@@ -10,12 +10,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.pusher.client.Pusher;
-import com.pusher.client.PusherOptions;
-import com.pusher.client.channel.Channel;
-import com.pusher.client.channel.SubscriptionEventListener;
-import com.pusher.pushnotifications.PushNotifications;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -31,14 +25,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
+
 public class MainActivity extends AppCompatActivity {
 
-
+    public static String loggeduser="";
+    public static String url = "http://192.168.1.226:8000/api/";
     private static final String TAG = "MainActivity.java";
 
     EditText empid, pswd;
     Button login;
     String email,password;
+
 
   /* String idpass[][]={{"GIEHEAD","Aquarelle1"},{"FMANAGER","Aquarelle2"},{"PMANAGER","Aquarelle3"},{"IEE","Aquarelle4"},{"IELE","Aquarelle5"},{"HRMANAGER","Aquarelle6"},{"WEOF","Aquarelle7"},{"RQH","Aquarelle8"},{"QAM","Aquarelle9"},{"RMH","Aquarelle10"},{"MI","Aquarelle11"},{"S","tAquarelle12"},
             {"S2","Aquarelle13"},{"S3","Aquarelle14"},{"S4","Aquarelle15"},{"S5","Aquarelle16"},{"QC1","Aquarelle17"},{"QC2","Aquarelle18"},
@@ -60,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        PushNotifications.start(getApplicationContext(),"502a2eb7-7efe-4d30-a15a-a645f3ff15db");
-        PushNotifications.subscribe("hello");
 
 
 
@@ -88,51 +85,6 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-
-
-
-
-
-
-
-        PusherOptions options = new PusherOptions();
-        options.setCluster("ap2");
-        Pusher pusher = new Pusher("0a562ccafe38b9975498", options);
-
-        Channel channel = pusher.subscribe("my-channel");
-
-        channel.bind("my-event", new SubscriptionEventListener() {
-            @Override
-            public void onEvent(String channelName, String eventName, final String data) {
-                System.out.println(data);
-            }
-        });
-
-        pusher.connect();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
     private class Mydownloader extends AsyncTask<String, Void, Bitmap> {
@@ -151,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
             try {
                 // url where the data will be posted
-                String postReceiverUrl = "http://192.168.1.218:8000/api/login/";
+                String postReceiverUrl = url + "login/";
                 Log.v(TAG, "postURL: " + postReceiverUrl);
 
 
@@ -183,6 +135,7 @@ public class MainActivity extends AppCompatActivity {
                    //     Toast.makeText(MainActivity.this, "WELCOME", Toast.LENGTH_SHORT).show();
 
                         Intent iii = new Intent(MainActivity.this, home.class);
+                        loggeduser=email;
                         iii.putExtra("username",email);
                         startActivity(iii);
                     }

@@ -22,6 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
+
+
+
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,6 +42,21 @@
         <activity android:name=".Allalertss" />
         <activity android:name=".Task_details" />
         <activity android:name=".Alert"></activity>
+
+
+        <service android:name="com.pusher.notifications.fcm.FCMMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+
+            </intent-filter>
+        </service>
+
+        <service android:name="com.pusher.android.notifications.fcm.FCMInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
     </application>
 
 

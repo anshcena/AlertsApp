@@ -66,5 +66,119 @@
         android:text="BACK"
         android:textSize="18sp" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView45"
+        android:layout_alignBottom="@+id/textView45"
+        android:layout_alignStart="@+id/textView17"
+        android:layout_marginStart="13dp"
+        android:text="---"
+        android:id="@+id/textView48" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView44"
+        android:layout_alignBottom="@+id/textView44"
+        android:layout_alignStart="@+id/textView16"
+        android:text="---"
+        android:id="@+id/textView45" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView12"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="22dp"
+        android:layout_toEndOf="@+id/textView43"
+        android:text="---"
+        android:id="@+id/textView44" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView48"
+        android:layout_alignBottom="@+id/textView48"
+        android:layout_marginStart="40dp"
+        android:layout_toEndOf="@+id/textView15"
+        android:text="---"
+        android:id="@+id/textView52" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView44"
+        android:layout_centerVertical="true"
+        android:text="---"
+        android:id="@+id/textView49" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView49"
+        android:layout_alignBottom="@+id/textView49"
+        android:layout_alignStart="@+id/textView45"
+        android:text="---"
+        android:id="@+id/textView50" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView50"
+        android:layout_alignBottom="@+id/textView50"
+        android:layout_alignStart="@+id/textView48"
+        android:text="---"
+        android:id="@+id/textView51" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView51"
+        android:layout_alignBottom="@+id/textView51"
+        android:layout_alignStart="@+id/textView52"
+        android:text="---"
+        android:id="@+id/textView56" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView49"
+        android:layout_below="@+id/textView49"
+        android:layout_marginTop="46dp"
+        android:text="---"
+        android:id="@+id/textView53" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView53"
+        android:layout_alignBottom="@+id/textView53"
+        android:layout_alignStart="@+id/textView50"
+        android:text="---"
+        android:id="@+id/textView54" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView54"
+        android:layout_alignBottom="@+id/textView54"
+        android:layout_alignStart="@+id/textView51"
+        android:text="---"
+        android:id="@+id/textView55" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView55"
+        android:layout_alignBottom="@+id/textView55"
+        android:layout_alignStart="@+id/textView56"
+        android:id="@+id/textView57"
+        android:text="---" />
+
+
 
 </RelativeLayout>

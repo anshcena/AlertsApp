@@ -11,7 +11,8 @@ public class Allalertss extends AppCompatActivity {
 
     Button report;
     TextView backtomyalerts2;
-
+    TextView t1,t2,t3,s1,s2,s3;
+    TextView da1,da2,da3,tc1,tc2,tc3;
 
 
     @Override
@@ -20,6 +21,27 @@ public class Allalertss extends AppCompatActivity {
         setContentView(R.layout.activity_allalertss);
         report=(Button)findViewById(R.id.reports);
         backtomyalerts2=(TextView)findViewById(R.id.backtomyalerts2);
+
+        t1=(TextView)findViewById(R.id.textView46);
+        t2=(TextView)findViewById(R.id.textView58);
+        t3=(TextView)findViewById(R.id.textView62);
+
+        s1=(TextView)findViewById(R.id.textView47);
+        s2=(TextView)findViewById(R.id.textView59);
+        s3=(TextView)findViewById(R.id.textView63);
+
+        da1=(TextView)findViewById(R.id.textView57);
+        da1=(TextView)findViewById(R.id.textView60);
+        da1=(TextView)findViewById(R.id.textView64);
+
+        tc1=(TextView)findViewById(R.id.textView61);
+        tc2=(TextView)findViewById(R.id.textView65);
+        tc3=(TextView)findViewById(R.id.textView90);
+
+
+
+
+
 
         backtomyalerts2.setOnClickListener(new View.OnClickListener() {
             @Override
