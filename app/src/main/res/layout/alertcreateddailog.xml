@@ -10,15 +10,5 @@
         android:text="Thanks, Your Alert has been created !  "
         android:id="@+id/textView42" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView42"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:text="Go back"
-        android:textColor="#fff"
-        android:textStyle="bold"
-        android:id="@+id/goback"/>
 
 </RelativeLayout>

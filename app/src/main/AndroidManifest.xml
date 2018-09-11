@@ -2,17 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.root.alertsapp">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-
-
-
-
-
-
-
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:allowBackup="true"
@@ -22,12 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-
-
-
-
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,28 +23,23 @@
         <activity android:name=".home" />
         <activity android:name=".createalert" />
         <activity android:name=".Myalerts" />
-        <activity android:name=".Createdbme" />
         <activity android:name=".Acceptedbme" />
         <activity android:name=".Allalertss" />
         <activity android:name=".Task_details" />
-        <activity android:name=".Alert"></activity>
-
+        <activity android:name=".Alert" />
 
         <service android:name="com.pusher.notifications.fcm.FCMMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
-
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
-
         <service android:name="com.pusher.android.notifications.fcm.FCMInstanceIdService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
 
+        <activity android:name=".Createdbme"></activity>
     </application>
-
-
 
 </manifest>

@@ -1,5 +1,6 @@
 package com.example.root.alertsapp;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
@@ -31,7 +32,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     public static String loggeduser="";
-    public static String url = "http://192.168.1.226:8000/api/";
+    public static String url = "http://192.168.1.219:8000/api/";
     private static final String TAG = "MainActivity.java";
 
     EditText empid, pswd;
@@ -72,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
 
         pswd = (EditText) findViewById(R.id.pswd);
         login = (Button) findViewById(R.id.login);
+        empid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                empid.setText("");
+            }
+        });
 
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -91,12 +98,19 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
+            ProgressDialog pDialog = new ProgressDialog(MainActivity.this);
+            pDialog.setMessage("Please wait...");
+            pDialog.setCancelable(false);
+            pDialog.show();
+
         }
 
         @Override
         protected void onPostExecute(Bitmap bitmap) {
             super.onPostExecute(bitmap);
-        }
+           /* if (pDialog.isShowing())
+                pDialog.dismiss();
+        */}
 
         @Override
         protected Bitmap doInBackground(String... strings) {
@@ -122,39 +136,34 @@ public class MainActivity extends AppCompatActivity {
                 h.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 
 // execute HTTP post request
+                Log.v(TAG, "Response: 1");
                 HttpResponse response = c.execute(h);
+                Log.v(TAG, "Response: 2" );
                 HttpEntity resEntity = response.getEntity();
+                Log.v(TAG, "Response: 3");
 
                 if (resEntity != null) {
 
                     String responseStr = EntityUtils.toString(resEntity).trim();
                     Log.v(TAG, "Response: " + responseStr);
 
+
                     if(responseStr.equals("1"))
                     {
-                   //     Toast.makeText(MainActivity.this, "WELCOME", Toast.LENGTH_SHORT).show();
-
                         Intent iii = new Intent(MainActivity.this, home.class);
                         loggeduser=email;
                         iii.putExtra("username",email);
-                        startActivity(iii);
+                        startActivity(iii); }
+                    else
+                    {
+                       // Toast.makeText(MainActivity.this, "ERROR !", Toast.LENGTH_SHORT).show();
                     }
 
-
-
-
-                    // you can add an if statement here and do other actions based on the response
                 }
 
 
 
-              /*  else {
-
-                    Toast.makeText(MainActivity.this, "AGAIN", Toast.LENGTH_SHORT).show();
-                }*/
-
-
-            }
+                        }
             catch (ClientProtocolException e) {
                 e.printStackTrace();
             }

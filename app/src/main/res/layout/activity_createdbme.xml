@@ -93,7 +93,8 @@
         android:layout_marginTop="22dp"
         android:layout_toEndOf="@+id/textView43"
         android:text="---"
-        android:id="@+id/textView44" />
+        android:id="@+id/textView44"
+         />
 
     <TextView
         android:layout_width="wrap_content"

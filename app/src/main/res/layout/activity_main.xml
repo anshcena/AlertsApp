@@ -37,7 +37,8 @@
         android:layout_alignBottom="@+id/textView"
         android:layout_alignStart="@+id/pswd"
         android:textSize="20dp"
-        android:text="                       "
+        android:clickable="true"
+        android:text="    Enter employee id    "
         android:textStyle="bold" />
 
     <EditText
@@ -59,7 +60,8 @@
         android:layout_marginBottom="46dp"
         android:text="Andon System"
         android:textSize="28dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:id="@+id/textView75" />
 
     <Button
         android:layout_width="wrap_content"
@@ -73,4 +75,5 @@
         android:textSize="20dp"
         android:textStyle="bold"
         android:id="@+id/login"/>
+
 </RelativeLayout>

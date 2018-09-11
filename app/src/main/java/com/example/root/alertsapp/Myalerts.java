@@ -22,6 +22,7 @@ public class Myalerts extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent ii=new Intent(Myalerts.this,Createdbme.class);
+
             startActivity(ii);
 
             }
@@ -38,5 +39,13 @@ public class Myalerts extends AppCompatActivity {
 
 
 
+
+
+    }
+    @Override
+    public void onBackPressed() {
+     Intent i=new Intent(Myalerts.this,home.class);
+     startActivity(i);
+        //  super.onBackPressed();
     }
 }

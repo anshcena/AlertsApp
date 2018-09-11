@@ -46,7 +46,7 @@ public class Allalertss extends AppCompatActivity {
         backtomyalerts2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Allalertss.this,Myalerts.class);
+                Intent intent=new Intent(Allalertss.this,home.class);
                 startActivity(intent);
             }
         });

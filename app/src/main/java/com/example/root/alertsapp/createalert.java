@@ -43,7 +43,7 @@ public class createalert extends AppCompatActivity {
 
     private static final String TAG = "";
     Spinner section, line, profile, depart, machine, task, prof;
-    Button back, createalertbutton, gobaacktohomefordailog;
+    Button back, createalertbutton;// gobaacktohomefordailog;
 
     String linetoserver="",profiletoserver="",deptoser,protoser,tasktoser,sectoser;
 
@@ -63,7 +63,7 @@ public class createalert extends AppCompatActivity {
         machine = (Spinner) findViewById(R.id.machine);
         task = (Spinner) findViewById(R.id.task);
         prof = (Spinner) findViewById(R.id.prof);
-        gobaacktohomefordailog = (Button) findViewById(R.id.goback);
+      //  gobaacktohomefordailog = (Button) findViewById(R.id.goback);
 
         back = (Button) findViewById(R.id.back);
         createalertbutton = (Button) findViewById(R.id.createalertbutton);
@@ -360,5 +360,10 @@ public class createalert extends AppCompatActivity {
             return null;
         }
     }
-
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(createalert.this,home.class);
+        startActivity(intent);
+        //  super.onBackPressed();
+    }
 }
